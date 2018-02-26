@@ -105,7 +105,7 @@ services:
       context: sentinel
     environment:
       PORT: 26382
-      REDIS_HOST: redis-replica-2
+      REDIS_HOST: redis-replica-1
       REDIS_PORT: 6382
       QUORUM: 2
     image: bitlum/exchange-sentinel
@@ -193,6 +193,8 @@ services:
     depends_on:
       - kafka
       - sentinel1
+      - sentinel2
+      - sentinel3
       - alertcenter
     volumes:
       - /tmp/bitlum/exchange/trade/marketprice/log:/var/log/trade
