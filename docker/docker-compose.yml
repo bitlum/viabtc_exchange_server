@@ -154,6 +154,8 @@ services:
         max-size: 10m
     depends_on:
       - sentinel1
+      - sentinel2
+      - sentinel3
     volumes:
       - /tmp/bitlum/exchange/trade/alertcenter/log:/var/log/trade
     networks:
