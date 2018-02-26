@@ -51,6 +51,7 @@ RUN cd viabtc_exchange_server/network && make
 RUN cd viabtc_exchange_server/utils && make
 RUN cd viabtc_exchange_server/alertcenter && make
 RUN cd viabtc_exchange_server/matchengine && make
+COPY docker/exchange/makefile.marketprice.ubuntu viabtc_exchange_server/marketprice/makefile
 RUN cd viabtc_exchange_server/marketprice && make
 RUN cd viabtc_exchange_server/readhistory && make 
 RUN cd viabtc_exchange_server/accesshttp && make
