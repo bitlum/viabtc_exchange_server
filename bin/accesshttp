@@ -89,6 +89,10 @@ function market.list () {
 	rpc "market.list"
 }
 
+function asset.list () {
+	rpc "asset.list"
+}
+
 # if [ $# -gt 0 ];then
 # rpc $@
 # fi
